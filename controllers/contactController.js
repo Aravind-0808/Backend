@@ -6,7 +6,7 @@ const router = express.Router();
 /** ➤ CREATE Contact (POST) */
 router.post("/", async (req, res) => {
   try {
-    const { name, mobileNumber, message, program } = req.body;
+    const { name, mobileNumber, message,  } = req.body;
 
     // Validation
     if (!name || !mobileNumber || !message) {
@@ -17,7 +17,6 @@ router.post("/", async (req, res) => {
       name,
       mobileNumber,
       message,
-      program,
     });
 
     res.status(201).json(newContact);
